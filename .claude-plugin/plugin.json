@@ -1,0 +1,22 @@
+{
+  "name": "wazza",
+  "version": "0.1.0",
+  "description": "Wazza's QC, sound, captions and dubbing tools for your agent, with the Wazza MCP server connected.",
+  "author": {
+    "name": "Wazza",
+    "url": "https://wazza.ai"
+  },
+  "homepage": "https://app.wazza.ai/skills",
+  "keywords": [
+    "video",
+    "qc",
+    "loudness",
+    "captions",
+    "dubbing",
+    "remotion",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://app.wazza.ai/legal/privacy",
+  "license": "MIT",
+  "repository": "https://github.com/Wazza-AI/skills"
+}

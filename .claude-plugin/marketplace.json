@@ -1,0 +1,16 @@
+{
+  "name": "wazza",
+  "owner": {
+    "name": "Wazza AI"
+  },
+  "metadata": {
+    "description": "Wazza skills for coding agents: measure, finish, voice and dub the video your agent renders."
+  },
+  "plugins": [
+    {
+      "name": "wazza",
+      "source": "./",
+      "description": "Wazza's QC, sound, captions and dubbing tools for your agent, with the Wazza MCP server connected."
+    }
+  ]
+}
