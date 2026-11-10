@@ -36,8 +36,13 @@ Test keys (`wz_test_…`) are free and return sample files: they check your setu
 | Skill | What it does |
 |---|---|
 | [`wazza-check`](skills/wazza-check/SKILL.md) | Measures a render against delivery rules (loudness, flashing, colour levels, file specs) and fixes what fails. |
+| [`wazza-shorts`](skills/wazza-shorts/SKILL.md) | Long video to vertical 9:16 shorts with burned-in captions. Your agent picks the moments from the transcript. |
+| [`wazza-unslop`](skills/wazza-unslop/SKILL.md) | Makes generated shots stop reading as generated: a critique of all shots, then its fix applied to each shot that needs one. |
+| [`wazza-sound`](skills/wazza-sound/SKILL.md) | Foley written to the picture, sound effects and music, mixed by your agent with ffmpeg. |
+| [`wazza-dub`](skills/wazza-dub/SKILL.md) | Dubs a video into other languages, one run per language, with subtitles, and checks each version. The lips do not change. |
 
-More are coming: shorts, generated-shot grading, sound, dubbing, and studio delivery.
+The full list, including what is planned, is [`index.json`](index.json). `python3 scripts/check.py`
+keeps it in step with the skill folders.
 
 A pass from `wazza-check` is a measurement against the rules it lists, not a safety or compliance
 certificate.

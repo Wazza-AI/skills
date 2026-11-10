@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "about": "The list of Wazza skills. One source for the README, the Skills page in the app and agents. A shipped entry has a folder skills/<id>/ with a SKILL.md; scripts/check.py keeps the two in step.",
+  "skills": [
+    {
+      "id": "wazza-check",
+      "status": "shipped",
+      "group": "creators",
+      "featured": true,
+      "category": "Check",
+      "title": "Measure a render before you post it",
+      "line": "Loudness, flashing, colour levels and file specs, with a fix for each failure.",
+      "summary": "Your agent cannot watch video; it looks at stills. This skill measures the whole render against delivery rules and hands the agent one finding per rule with its fix, so it can repair the render and check again.",
+      "steps": [
+        "Sends the render to the delivery check, with the deep pass for flashing and banding",
+        "Reads each failed rule and its fix",
+        "Fixes the source, renders again and checks again, up to three rounds"
+      ],
+      "note": "Loudness is judged against a delivery profile: Netflix, Prime Video, Apple, EBU, ATSC or review. A pass is a measurement, not a safety or compliance certificate.",
+      "tools": ["delivery-check"],
+      "workflows": []
+    },
+    {
+      "id": "wazza-shorts",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "Shorts",
+      "title": "Long video to vertical shorts",
+      "line": "Your agent picks the moments; Wazza crops them to 9:16 and burns in captions.",
+      "summary": "For a podcast, a stream or any long clip. Your agent reads the transcript and picks the moments worth posting. Wazza cuts each one, crops it to 9:16 and burns in its captions.",
+      "steps": [
+        "Transcribes the clip, up to 30 minutes",
+        "Picks up to 20 segments, each up to 120 seconds, and shows you the list",
+        "Runs the shorts workflow: one captioned vertical short per segment"
+      ],
+      "note": "A segment that fails does not fail the others.",
+      "tools": ["subtitles"],
+      "workflows": ["shorts"]
+    },
+    {
+      "id": "wazza-unslop",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "Generated shots",
+      "title": "Make generated shots look less generated",
+      "line": "A critique of all your shots, then the fix it proposes, applied to each shot that needs one.",
+      "summary": "For shots made with video models. Your agent sends one to six shots. Wazza reads them together, proposes a fix for whatever gives each one away, and applies it.",
+      "steps": [
+        "Sends 1 to 6 shots of a scene to the unslop workflow",
+        "Reads what the critique found in each shot",
+        "Gets back each shot that needed a fix, with the fix applied"
+      ],
+      "note": "A shot with nothing to fix is left as it is. It changes the look, not motion or anatomy errors.",
+      "tools": [],
+      "workflows": ["unslop"]
+    },
+    {
+      "id": "wazza-sound",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "Sound",
+      "title": "Sound for a silent render",
+      "line": "Foley written to the picture, plus effects and music your agent places.",
+      "summary": "Video rendered from code comes out silent. Wazza watches the clip and writes foley for it. Effects and a music track come back as separate files, and your agent places and mixes them with ffmpeg.",
+      "steps": [
+        "Gets foley for the clip: the clip with sound, and the sound alone",
+        "Generates each effect the timeline calls for",
+        "Generates a music track and mixes everything with ffmpeg"
+      ],
+      "note": "Music made for general use is for social and the web. A film, a TV programme or a game needs music made for picture.",
+      "tools": ["foley", "sound-effects", "music"],
+      "workflows": []
+    },
+    {
+      "id": "wazza-dub",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "Languages",
+      "title": "Dub a video into another language",
+      "line": "One run per language, clips up to 10 minutes. The voice changes, the lips do not.",
+      "summary": "Give your agent a finished video and the languages you want. It runs one dub per language, adds subtitles, and checks each version.",
+      "steps": [
+        "Dubs the clip into each language, one run each",
+        "Adds subtitles: sidecar files in up to 5 languages per run, or burned in",
+        "Checks each version with wazza-check"
+      ],
+      "note": "The speech is replaced; mouths are not re-animated.",
+      "tools": ["dub", "subtitles", "delivery-check"],
+      "workflows": []
+    },
+    { "id": "wazza-deliver", "status": "planned", "group": "studios", "title": "Masters that pass delivery QC" },
+    { "id": "wazza-vfx-return", "status": "planned", "group": "studios", "title": "Check a VFX return against its pull" },
+    { "id": "wazza-match", "status": "planned", "group": "studios", "title": "Solve the grade between two shots" },
+    { "id": "wazza-voice", "status": "planned", "group": "creators", "title": "Narration and voices" },
+    { "id": "wazza-formats", "status": "planned", "group": "creators", "title": "Vertical, square and wide" },
+    { "id": "wazza-finish", "status": "planned", "group": "creators", "title": "Final encode for social" },
+    { "id": "wazza-character", "status": "planned", "group": "creators", "title": "Consistent characters" },
+    { "id": "wazza-sprites", "status": "planned", "group": "creators", "title": "2D and sprites" },
+    { "id": "wazza-broll", "status": "planned", "group": "creators", "title": "Generated b-roll" },
+    { "id": "wazza-asset3d", "status": "planned", "group": "creators", "title": "3D assets" }
+  ]
+}
