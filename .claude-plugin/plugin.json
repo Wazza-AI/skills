@@ -1,7 +1,7 @@
 {
   "name": "wazza",
-  "version": "0.1.0",
-  "description": "Wazza's QC, sound, captions and dubbing tools for your agent, with the Wazza MCP server connected.",
+  "version": "0.2.0",
+  "description": "Wazza's QC, delivery, generation, voice, 3D, sound, captions and dubbing tools for your agent, with the Wazza MCP server connected.",
   "author": {
     "name": "Wazza",
     "url": "https://wazza.ai"
@@ -13,6 +13,10 @@
     "loudness",
     "captions",
     "dubbing",
+    "generation",
+    "text-to-speech",
+    "3d",
+    "delivery",
     "remotion",
     "mcp"
   ],

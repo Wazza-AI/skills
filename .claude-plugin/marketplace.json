@@ -4,13 +4,13 @@
     "name": "Wazza AI"
   },
   "metadata": {
-    "description": "Wazza skills for coding agents: measure, finish, voice and dub the video your agent renders."
+    "description": "Wazza skills for coding agents: measure, generate, voice, dub and deliver the video your agent makes."
   },
   "plugins": [
     {
       "name": "wazza",
       "source": "./",
-      "description": "Wazza's QC, sound, captions and dubbing tools for your agent, with the Wazza MCP server connected."
+      "description": "Wazza's QC, delivery, generation, voice, 3D, sound, captions and dubbing tools for your agent, with the Wazza MCP server connected."
     }
   ]
 }

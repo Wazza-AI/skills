@@ -92,15 +92,102 @@
       "tools": ["dub", "subtitles", "delivery-check"],
       "workflows": []
     },
-    { "id": "wazza-deliver", "status": "planned", "group": "studios", "title": "Masters that pass delivery QC" },
+    {
+      "id": "wazza-generate",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "Generate",
+      "title": "Generate video and images, price first",
+      "line": "Your agent picks the model for the shot, quotes the run, then makes it.",
+      "summary": "Many video and image models through one connection. Your agent picks the model from what the shot needs: a draft or a final, the resolution, the length, sound, a start frame or references. It quotes each run before it starts.",
+      "steps": [
+        "Reads the models and what each one takes",
+        "Prices the run and tells you before it starts",
+        "Runs it, waits for the file and hands it back"
+      ],
+      "note": "The model list and its prices change; your agent reads them live each time.",
+      "tools": ["video-generate", "image-generate"],
+      "workflows": []
+    },
+    {
+      "id": "wazza-storyboard",
+      "status": "shipped",
+      "group": "studios",
+      "featured": false,
+      "category": "Pre-production",
+      "title": "From a script to boards and an animatic",
+      "line": "A shot list, boards with the same characters, temp voices, and an animatic cut with ffmpeg.",
+      "summary": "Give your agent a script or a brief. It writes the shot list, makes reference views of the cast, draws one board per shot, reads the dialogue in temp voices and cuts an animatic. It can lay out a deck from the boards.",
+      "steps": [
+        "Writes the shot list and shows it to you",
+        "Makes character and set views, then one board per shot",
+        "Reads the dialogue, adds temp music and cuts the animatic with ffmpeg"
+      ],
+      "note": "Wazza has no storyboard tool: your agent joins the image, orbit and voice tools, and makes the animatic and the deck itself.",
+      "tools": ["turnaround", "multi-angle", "image-generate", "scene", "voice", "music"],
+      "workflows": []
+    },
+    {
+      "id": "wazza-deliver",
+      "status": "shipped",
+      "group": "studios",
+      "featured": false,
+      "category": "Delivery",
+      "title": "Masters that pass delivery QC",
+      "line": "Measure first, then conform to ProRes, DNxHR, 16-bit PNG or EXR, then check the master.",
+      "summary": "For a film, an episode or a shot that must go to a platform or a vendor. Your agent measures the source, fixes what the conform cannot, conforms it to the codec and raster of the spec, and checks the delivered file.",
+      "steps": [
+        "Measures the source with the deep delivery check",
+        "Conforms it, with an upscale when the raster needs one",
+        "Checks the master and each audio file against the profile"
+      ],
+      "note": "Wazza does not mix or build audio stems; it measures them. A pass is a measurement, not the distributor's QC.",
+      "tools": ["delivery-check", "deliver-as", "transcode"],
+      "workflows": ["deliver"]
+    },
+    {
+      "id": "wazza-voice",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "Voice",
+      "title": "Narration and voices",
+      "line": "Reads a script or a whole scene in the workspace's voices, or designs a new voice.",
+      "summary": "Your agent lists the voices of your workspace, then reads a script in one of them, a scene in several voices as one take, or a recording again in another voice. It can also design three previews of a new voice from a description.",
+      "steps": [
+        "Lists the voices and lets you pick",
+        "Prices and reads the script or the scene",
+        "Hands back the audio, with line timings for a scene"
+      ],
+      "note": "A cloned voice is a real person's: your agent asks before it uses one. A designed voice is saved in the app.",
+      "tools": ["voice", "scene", "voice-design", "voice-change"],
+      "workflows": []
+    },
+    {
+      "id": "wazza-3d",
+      "status": "shipped",
+      "group": "creators",
+      "featured": false,
+      "category": "3D",
+      "title": "From an image to a 3D model",
+      "line": "A textured GLB from a picture or several views, cleaned for Blender, Unity, Unreal or Godot.",
+      "summary": "Give your agent a picture of a prop or a character. Wazza makes a textured model, and can rebuild its topology, unwrap its UVs or split it into parts. Your agent brings it into the engine.",
+      "steps": [
+        "Cuts the subject out and makes more views if needed",
+        "Makes the textured model in the profile the use calls for",
+        "Cleans topology and UVs, then imports it into the engine"
+      ],
+      "note": "A model from one picture guesses the sides it cannot see; several views give more control.",
+      "tools": ["3d-model", "background-remove", "turnaround", "mesh-retopology", "mesh-smart-topology", "mesh-smart-uv", "mesh-split"],
+      "workflows": []
+    },
     { "id": "wazza-vfx-return", "status": "planned", "group": "studios", "title": "Check a VFX return against its pull" },
     { "id": "wazza-match", "status": "planned", "group": "studios", "title": "Solve the grade between two shots" },
-    { "id": "wazza-voice", "status": "planned", "group": "creators", "title": "Narration and voices" },
     { "id": "wazza-formats", "status": "planned", "group": "creators", "title": "Vertical, square and wide" },
     { "id": "wazza-finish", "status": "planned", "group": "creators", "title": "Final encode for social" },
     { "id": "wazza-character", "status": "planned", "group": "creators", "title": "Consistent characters" },
     { "id": "wazza-sprites", "status": "planned", "group": "creators", "title": "2D and sprites" },
-    { "id": "wazza-broll", "status": "planned", "group": "creators", "title": "Generated b-roll" },
-    { "id": "wazza-asset3d", "status": "planned", "group": "creators", "title": "3D assets" }
+    { "id": "wazza-broll", "status": "planned", "group": "creators", "title": "Generated b-roll" }
   ]
 }
