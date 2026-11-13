@@ -1,5 +1,7 @@
 # Wazza skills
 
+[![skills.sh](https://skills.sh/b/Wazza-AI/skills)](https://skills.sh/Wazza-AI/skills)
+
 Your agent can't watch video. Wazza measures it.
 
 Skills for coding agents (Claude Code, Codex, Cursor and others) that call
