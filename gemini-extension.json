@@ -1,0 +1,10 @@
+{
+  "name": "wazza",
+  "version": "0.2.0",
+  "description": "QC, conform and AI video, image and sound generation for film, with the Wazza MCP server connected. Every run is priced before it starts.",
+  "mcpServers": {
+    "wazza": {
+      "httpUrl": "https://api-pro.wazza.ai/v1/mcp"
+    }
+  }
+}

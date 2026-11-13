@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wazza": {
+      "type": "http",
+      "url": "https://api-pro.wazza.ai/v1/mcp"
+    }
+  }
+}

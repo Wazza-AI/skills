@@ -1,0 +1,35 @@
+{
+  "name": "wazza",
+  "displayName": "Wazza",
+  "version": "0.2.0",
+  "description": "QC, conform and AI video, image and sound generation for film, with the Wazza MCP server connected. Every run is priced before it starts.",
+  "author": {
+    "name": "Wazza",
+    "email": "info@wazza.ai"
+  },
+  "homepage": "https://app.wazza.ai/skills",
+  "repository": "https://github.com/Wazza-AI/skills",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "video",
+    "qc",
+    "loudness",
+    "captions",
+    "dubbing",
+    "generation",
+    "text-to-speech",
+    "3d",
+    "delivery",
+    "mcp"
+  ],
+  "category": "integrations",
+  "tags": [
+    "video",
+    "film",
+    "media",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}
