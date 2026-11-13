@@ -67,4 +67,4 @@ a real render. Say so if the user has only a test key.
 
 - Do not claim a video passes from looking at frames. Only the report says it passes.
 - Do not hide advisory findings or rules that were not run.
-- Do not use this to change a file: it changes nothing. Finishing is `wazza-finish`.
+- Do not use this to change a file: it changes nothing. To conform or master a file to a spec, use `wazza-deliver`.
