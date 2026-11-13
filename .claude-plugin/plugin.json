@@ -20,7 +20,7 @@
     "remotion",
     "mcp"
   ],
-  "privacyPolicyUrl": "https://app.wazza.ai/legal/privacy",
+  "privacyPolicyUrl": "https://wazza.ai/en/legal/privacy",
   "license": "MIT",
   "repository": "https://github.com/Wazza-AI/skills"
 }
